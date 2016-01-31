@@ -15,6 +15,8 @@ val dandelion = <minecraft:yellow_flower>;
 var dyeBlack = <ore:dyeBlack>;
 val stick = <minecraft:stick>;
 val book = <minecraft:book>;
+val snowball = <minecraft:snowball>;
+val icy = <witchery:ingredient:78>;
 
 //Change attuned stone recipe to use Mana Diamond
 recipes.remove(attunedStone);
@@ -26,3 +28,6 @@ ManaInfusion.addInfusion(manaPearl, wispyCotton, 2000);
 //Change herbology book recipe
 recipes.remove(herbologyBook);
 recipes.addShaped(herbologyBook, [[null, poppy, null], [dyeBlack, book, stick], [null, dandelion, null]]);
+
+//Icy needle to Snowball recipe
+recipes.addShaped(snowball * 4, [[null, icy ,null], [icy, null, icy], [null, icy, null]]);
